@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="news-container">
+        <div class="news-section">
+            <h2>News</h2>
+            <div class="news-item" onclick="openModal('newsModal1')">
+                <img src="assets/images/news02.png" alt="Enrollment Announcement">
+                <div class="news-details">
+                    <h3>ANNOUNCEMENT</h3>
+                    <p>ENROLLMENT<br>FIRST SEMESTER A.Y. 2024-2025</p>
+                    <p>ENROLLMENT STARTS ON JUNE 18, 2024</p>
+                </div>
+            </div>
+            <div class="news-item" onclick="openModal('newsModal2')">
+                <img src="assets/images/news04.png" alt="Uniform Announcement">
+                <div class="news-details">
+                    <h3>ANNOUNCEMENT</h3>
+                    <p>All freshmen and transferees are required to wear school uniform</p>
+                </div>
+            </div>
+        </div>
+        <div class="events-section">
+            <h2>Events</h2>
+            <div class="event-item" onclick="openModal('modal1')">
+                <img src="assets/images/news05.jpg" alt="Happy Teachers Day">
+                <div class="event-details">
+                    <h3>Happy Teachers Day!</h3>
+                    <p>Oct 05, 2024</p>
+                </div>
+            </div>
+            <div class="event-item" onclick="openModal('modal2')">
+                <img src="assets/images/news03.jpg" alt="Halloween Party">
+                <div class="event-details">
+                    <h3>Happy Halloween!!</h3>
+                    <p>Oct 31, 2024</p>
+                </div>
+            </div>
+            <div class="event-item" onclick="openModal('modal3')">
+                <img src="assets/images/news01.png" alt="Christmas Break">
+                <div class="event-details">
+                    <h3>Merry Christmas!!</h3>
+                    <p>Dec 22, 2024</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <div id="newsModal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('newsModal1')">&times;</span>
+            <h3>Enrollment is now open!</h3>
+            <p><strong>📣 ANNOUNCEMENT: College Enrollment for SY 2024-2025 is Now Open! 📣</strong><br>
+                Dear Students and Parents,<br>
+                We are excited to announce that college enrollment for the school year 2024-2025 is now open! This is an excellent opportunity for all prospective students to take the next step in their academic journey.<br>
+                <strong>How to Enroll:</strong><br>
+                Application Form: Fill out the application form available at our enrollment office or on our website.<br>
+                Documents Required:<br>
+                High school diploma or equivalent<br>
+                Transcript of records<br>
+                Identification (valid ID)<br>
+                Submit Your Application: Bring your completed application and required documents to the enrollment office during office hours.<br>
+                <strong>Important Notes:</strong><br>
+                Early enrollment is encouraged to secure your spot in your desired program.<br>
+                Financial aid and scholarship opportunities are available. Please inquire during the enrollment process for more information.<br>
+                We look forward to welcoming you to our college community and wish you all the best as you embark on this exciting journey!<br>
+                <strong>Enroll now and start your path to success for SY 2024-2025!</strong>
+            </p>
+        </div>
+    </div>
+    <div id="newsModal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('newsModal2')">&times;</span>
+            <h3>School Uniform Policy</h3>
+            <p><strong>📣 ANNOUNCEMENT: School Uniform Requirement 📣</strong><br>
+                Dear Students and Parents,<br>
+                We hope this message finds you well! We would like to inform you that starting on September 16, all students are required to wear the school uniform during school hours and school-related events.<br>
+                <strong>Important Notes:</strong><br>
+                Please ensure that uniforms are clean and worn appropriately.<br>
+                Students will be reminded of this requirement, and those who do not comply may face disciplinary action.<br>
+                We thank you for your cooperation and support in making our school a place of pride and excellence!<br>
+                Let’s come together to foster a respectful and cohesive school environment!
+            </p>
+        </div>
+    </div>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h3>Happy Teachers Day!</h3>
+            <p><strong>🎉 ANNOUNCEMENT: <br>Happy Teachers' Day Celebration 🎉</strong><br>
+                Dear Students and Faculty,<br>
+                We are excited to announce that we will be celebrating Teachers' Day with a special event to honor and appreciate the hard work, dedication, and passion of our amazing teachers!<br>
+                <strong>✨ Program Highlights:</strong><br>
+                Welcome Remarks to kick off the event<br>
+                Student Performances featuring songs, poems, and dances<br>
+                Teacher Recognition Awards to celebrate outstanding contributions<br>
+                Fun Activities for teachers to enjoy<br>
+                Let's come together and make this day unforgettable for the individuals who inspire and guide us every day.<br>
+                <strong>Happy Teachers' Day!</strong>
+            </p>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h3>Happy Halloween!!</h3>
+            <p><strong>🎃 ANNOUNCEMENT: Halloween Celebration 🎃</strong><br>
+                Dear Students and Faculty,<br>
+                Get ready for a spooktacular time! We are thrilled to announce our Halloween Celebration! Join us for a day filled with fun, fright, and festive activities!<br>
+                <strong>🎉 Event Highlights:</strong><br>
+                <b>Costume Parade:</b> Dress in your best costume for a chance to win exciting prizes!<br>
+                Haunted House: Dare to explore our haunted maze filled with thrills and chills.<br>
+                Spooky Treats: Enjoy delicious Halloween-themed snacks and refreshments.<br>
+                <strong>Happy Halloween!</strong>
+            </p>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h3>Merry Christmas!!</h3>
+            <p><strong>🎄 ANNOUNCEMENT: Christmas Celebration 🎄</strong><br>
+                Dear Students and Faculty,<br>
+                It's the most wonderful time of the year! We are excited to announce our upcoming Christmas Celebration to spread joy, cheer, and festive spirit!<br>
+                <b>🎉 Event Highlights:</b><br>
+                <b>Christmas Tree Lighting:</b> Join us as we light up our festive tree to kick off the celebrations.<br>
+                Secret Santa Gift Exchange: Participate in the fun by bringing a small gift to share!<br>
+                <strong>Merry Christmas!</strong>
+            </p>
+        </div>
+    </div>
+    <script>
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = "block";
+        }
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            const modals = document.getElementsByClassName("modal");
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target === modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox</title>
+    <link rel="stylesheet" href="assets/css/revamped_inbox.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div id="header"></div>
+    <div class="inbox-container">
+        <div class="ticket-list-container">
+            <div class="filters">
+                <select>
+                    <option>This Week</option>
+                    <option>Last Week</option>
+                    <option>This Month</option>
+                </select>
+                <select>
+                    <option>New Tickets</option>
+                    <option>On-Going Tickets</option>
+                    <option>Resolved Tickets</option>
+                </select>
+            </div>
+            <div class="ticket-list">
+                <div class="ticket-item active" onclick="loadConversation('ticket1')">
+                    <div class="ticket-dot green"></div>
+                    <div class="ticket-details">
+                        <p>Ticket# 2024-09/24</p>
+                        <p>Ge8 Grade</p>
+                    </div>
+                </div>
+                <div class="ticket-item" onclick="loadConversation('ticket2')">
+                    <div class="ticket-dot orange"></div>
+                    <div class="ticket-details">
+                        <p>Ticket# 2024-09/28</p>
+                        <p>Poste nga way suga</p>
+                    </div>
+                </div>
+                <div class="ticket-item" onclick="loadConversation('ticket3')">
+                    <div class="ticket-dot blue"></div>
+                    <div class="ticket-details">
+                        <p>Ticket# 2024-09/30</p>
+                        <p>Si Carlo wala nag flush sa CR</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="message-box-container">
+            <div class="message-header" id="message-header">
+                <h3>Prof. Sammie Maglambayan</h3>
+                <p>Ticket# 2024-09/28</p>
+            </div>
+            <div class="messages" id="messages">
+                <div id="ticket1-conversation" class="conversation">
+                    <div class="message user-message">
+                        <img src="assets/images/user.png" alt="User" class="message-avatar">
+                        <p>Hi, can you please help me understand why I got a low grade in GE8? I thought I did well in the project.</p>
+                    </div>
+                    <div class="message teacher-message">
+                        <img src="assets/images/teacher.png" alt="Teacher" class="message-avatar">
+                        <p>Hi, we can schedule a review session to go over your project and grades. Please let me know a convenient time for you.</p>
+                    </div>
+                </div>
+                <div id="ticket2-conversation" class="conversation hidden">
+                    <div class="message user-message">
+                        <img src="assets/images/user.png" alt="User" class="message-avatar">
+                        <p>Good morning po, way suga ang poste sa may entrance banda sa visayan campus UM, if ever po pwede ma fix kay naa man guy klase evening. Thank you.</p>
+                    </div>
+                    <div class="message teacher-message">
+                        <img src="assets/images/teacher.png" alt="Teacher" class="message-avatar">
+                        <p>Hi! Thank you for reporting the issue. I will coordinate with the facilities team to have the lights checked and fixed as soon as possible. Please be careful when attending your evening classes. If you encounter any further concerns, feel free to let us know. Take care!</p>
+                    </div>
+                </div>
+                <div id="ticket3-conversation" class="conversation hidden">
+                    <div class="message user-message">
+                        <img src="assets/images/user.png" alt="User" class="message-avatar">
+                        <p>Si Carlo wala nag flush sa CR. Unsaon man ni nato?</p>
+                    </div>
+                    <div class="message teacher-message">
+                        <img src="assets/images/teacher.png" alt="Teacher" class="message-avatar">
+                        <p>Thank you for informing me. I will make sure that this issue is addressed by the janitorial team. Please encourage your classmates to follow proper restroom etiquette.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="message-input">
+                <input type="text" placeholder="Type message here">
+                <button type="button">➤</button>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function loadConversation(ticketId) {
+            document.querySelectorAll('.ticket-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            document.querySelector(`[onclick="loadConversation('${ticketId}')"]`).classList.add('active');
+            document.querySelectorAll('.conversation').forEach(convo => {
+                convo.classList.add('hidden');
+            });
+            document.getElementById(`${ticketId}-conversation`).classList.remove('hidden');
+            if (ticketId === 'ticket1') {
+                document.getElementById('message-header').innerHTML = `
+                    <h3>Prof. Carlos Dominguez</h3>
+                    <p>Ticket# 2024-09/24</p>
+                `;
+            } else if (ticketId === 'ticket2') {
+                document.getElementById('message-header').innerHTML = `
+                    <h3>Prof. Sammie Maglambayan</h3>
+                    <p>Ticket# 2024-09/28</p>
+                `;
+            } else if (ticketId === 'ticket3') {
+                document.getElementById('message-header').innerHTML = `
+                    <h3>Prof. Maria Delos Reyes</h3>
+                    <p>Ticket# 2024-09/30</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.inbox-container {
+    display: flex;
+    height: calc(100vh - 160px);
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ticket-list-container {
+    width: 30%;
+    background-color: #e8f6f9;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters select {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.ticket-list {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.ticket-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.ticket-item:hover {
+    background-color: #d0eff6;
+}
+
+.ticket-item.active {
+    border: 2px solid #009688;
+}
+
+.ticket-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.ticket-dot.green {
+    background-color: #28a745;
+}
+
+.ticket-dot.orange {
+    background-color: #ffc107;
+}
+
+.ticket-dot.blue {
+    background-color: #007bff;
+}
+
+.ticket-details p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.message-box-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+}
+
+.message-header {
+    background-color: #009688;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.message-header h3 {
+    margin: 0;
+}
+
+.message-header p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.user-message {
+    align-self: flex-start;
+    margin-left: auto;
+    background-color: #5fb98f;
+    color: white;
+}
+
+.teacher-message {
+    align-self: flex-start;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.message-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+.message-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 10px;
+    outline: none;
+}
+
+.message-input button {
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inbox-container {
+    display: flex;
+    height: calc(100vh - 160px);
+    max-width: 1200px;
+    margin: 35px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    background-color: white;
+}
+
+.conversation.hidden {
+    display: none;
+}
+
+.message-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    align-self: flex-end;
+}
+
+.user-message .message-avatar {
+    align-self: flex-end;
+}

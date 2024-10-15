@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Adjusted container-inbox to handle overflow and alignment issues */
+.container-inbox {
+    max-width: 90%;   /* Set a max-width that is less than 100% for consistent layout */
+    margin: 30px auto;  /* Centers the content and provides top and bottom spacing */
+    padding: 20px;     /* Adds some padding for internal spacing */
+    background-color: white;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap; /* Allows controls to wrap on smaller screens */
+    gap: 15px;       /* Adds space between controls */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+select,
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+}
+
+.ticket-list {
+    display: flex;
+    flex-direction: column;  /* Ensures items are stacked vertically */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-item {
+    display: flex;
+    flex-direction: row;  /* Flex items side by side */
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.ticket-item:last-child {
+    border-bottom: none;
+}
+
+.ticket-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.ticket-details {
+    flex: 3;  /* Give more space to ticket details */
+    margin-left: 10px;
+    overflow-wrap: break-word;  /* Ensures long text will wrap */
+}
+
+.ticket-details p {
+    margin: 5px 0;
+}
+
+.ticket-details p:first-child {
+    font-weight: 600;
+    color: #333;
+}
+
+.ticket-details a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.ticket-user {
+    flex: 1;  
+    text-align: right;  
+    padding-left: 20px;
+}
+
+.ticket-user p {
+    font-size: 12px;
+    color: #333;
+}
+
+.ticket-dot.green {
+    background-color: #28a745;
+}
+
+.ticket-dot.orange {
+    background-color: #ffc107;
+}
+
+.ticket-dot.blue {
+    background-color: #007bff;
+}
